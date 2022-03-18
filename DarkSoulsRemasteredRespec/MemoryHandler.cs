@@ -41,6 +41,12 @@ namespace DarkSoulsRemasteredRespec
         {
             int[] stats = new int[8];
             Process process = Process.GetProcessesByName("DarkSoulsRemastered").FirstOrDefault();
+
+            if(process == null)
+            {
+                throw new Exception("Failed to get Dark Souls Remastered process!");
+            } //if
+
             IntPtr processHandle = OpenProcess(ProcessAccessFlags.All, false, process.Id);
 
             IntPtr moduleAddress = (IntPtr)0;

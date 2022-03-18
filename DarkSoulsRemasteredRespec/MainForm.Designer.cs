@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.getStatsButton = new System.Windows.Forms.Button();
             this.vitalityLabel = new System.Windows.Forms.Label();
             this.vitalityTextBox = new System.Windows.Forms.TextBox();
@@ -414,9 +415,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 272);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 13);
+            this.label1.Size = new System.Drawing.Size(158, 13);
             this.label1.TabIndex = 36;
-            this.label1.Text = "Must be in the Level Up Screen!";
+            this.label1.Text = "Must be in the Level Up screen!";
             // 
             // MainForm
             // 
@@ -461,6 +462,7 @@
             this.Controls.Add(this.vitalityLabel);
             this.Controls.Add(this.getStatsButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

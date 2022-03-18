@@ -65,20 +65,27 @@ namespace DarkSoulsRemasteredRespec
 
         private void getStatsButton_Click(object sender, System.EventArgs e)
         {
-            skillPoints = 0;
-            stats = MemoryHandler.ReadMemory();
+            try
+            {
+                skillPoints = 0;
+                stats = MemoryHandler.ReadMemory();
 
-            int statsCount = stats.Length;
+                int statsCount = stats.Length;
 
-            vitalityTextBox.Text = stats[0].ToString();
-            attunementTextBox.Text = stats[1].ToString();
-            enduranceTextBox.Text = stats[2].ToString();
-            strengthTextBox.Text = stats[3].ToString();
-            dexterityTextBox.Text = stats[4].ToString();
-            resistanceTextBox.Text = stats[5].ToString();
-            intelligenceTextBox.Text = stats[6].ToString();
-            faithTextBox.Text = stats[7].ToString();
-            skillPointTextBox.Text = skillPoints.ToString();
+                vitalityTextBox.Text = stats[0].ToString();
+                attunementTextBox.Text = stats[1].ToString();
+                enduranceTextBox.Text = stats[2].ToString();
+                strengthTextBox.Text = stats[3].ToString();
+                dexterityTextBox.Text = stats[4].ToString();
+                resistanceTextBox.Text = stats[5].ToString();
+                intelligenceTextBox.Text = stats[6].ToString();
+                faithTextBox.Text = stats[7].ToString();
+                skillPointTextBox.Text = skillPoints.ToString();
+            } //try
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            } //catch
         } //UpdateStatsButton_Click
 
         private void updateStatsButton_Click(object sender, EventArgs e)
