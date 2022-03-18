@@ -3,7 +3,11 @@ Dark Souls Remastered tool that allows you to respec skill points in the Level U
 
 Want to try a different build? Fail your current build and don't want to start a new character just to try a different one? Then this tool can help you out.
 
+## Requirements
+[.NET Framework 4.6](https://www.microsoft.com/en-ca/download/details.aspx?id=48130)
+
 ## Usage
+
 1. Run the tool before, or after running Dark Souls Remastered.
 2. In DSR, sit down at a bonfire and open the Level Up screen.
 3. Press the *Get Stats!* button on the tool.
