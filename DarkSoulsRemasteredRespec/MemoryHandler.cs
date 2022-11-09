@@ -22,7 +22,8 @@ namespace DarkSoulsRemasteredRespec
             Synchronize = 0x00100000
         } //ProcessAccessFlags
 
-        private static int[] offsets = { 0x38, 0x1e0, 0x98, 0x38, 0x180, 0x18 };
+        private const int BASE_ADDRESS = 0x01C69740;
+        private static int[] offsets = { 0x20, 0x50, 0xD0, 0x20, 0x60, 0x18 };
         private static int[] paramOffsets = { 0x270, 0x274, 0x278, 0x27C, 0x280, 0x284, 0x288, 0x28C };
 
         [DllImport("kernel32.dll")]
@@ -62,7 +63,7 @@ namespace DarkSoulsRemasteredRespec
                 } //if
             } //for
 
-            IntPtr address = GetValueAtAddress(processHandle, moduleAddress + 0x01D05718, 8);
+            IntPtr address = GetValueAtAddress(processHandle, moduleAddress + BASE_ADDRESS, 8);
 
             foreach (int i in offsets)
             {
@@ -99,7 +100,7 @@ namespace DarkSoulsRemasteredRespec
                 } //if
             } //for
 
-            IntPtr address = GetValueAtAddress(processHandle, moduleAddress + 0x01D05718, 8);
+            IntPtr address = GetValueAtAddress(processHandle, moduleAddress + BASE_ADDRESS, 8);
 
             foreach (int i in offsets)
             {
